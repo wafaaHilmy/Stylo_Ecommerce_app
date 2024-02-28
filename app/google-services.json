@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "419038170561",
+    "project_id": "stylo-8bccd",
+    "storage_bucket": "stylo-8bccd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419038170561:android:9a9433a4aef9ba6e3eb340",
+        "android_client_info": {
+          "package_name": "com.training.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN5lJn0tvJIl39_I-_WirXLCd2kbglrSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
