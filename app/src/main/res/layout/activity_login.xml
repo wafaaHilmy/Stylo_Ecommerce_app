@@ -6,12 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.login.LoginActivity">
 
-    <!-- res/layout/example_activity.xml -->
+    <!-- res/layout/example_activity.xml
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.training.ecommerce.ui.login.LoginFragment" />
+        android:name="com.training.ecommerce.ui.login.LoginFragment" />-->
+    <fragment
+        android:id="@+id/login_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/login_nav"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
