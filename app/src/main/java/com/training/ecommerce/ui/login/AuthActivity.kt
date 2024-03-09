@@ -3,14 +3,12 @@ package com.training.ecommerce.ui.login
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.training.ecommerce.R
 import com.training.ecommerce.databinding.ActivityLoginBinding
 
-class LoginActivity : AppCompatActivity() {
+class AuthActivity : AppCompatActivity() {
 
    private lateinit var binding: ActivityLoginBinding
    private lateinit var loginViewModel: LoginViewModel

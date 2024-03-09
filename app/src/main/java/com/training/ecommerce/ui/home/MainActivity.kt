@@ -1,10 +1,9 @@
-package com.training.ecommerce
+package com.training.ecommerce.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.TextView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.training.ecommerce.databinding.ActivityMainBinding
 

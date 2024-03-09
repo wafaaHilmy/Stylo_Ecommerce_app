@@ -51,6 +51,8 @@ android {
 ext {
     nav_version = "2.7.7"
      fragment_version = "1.6.2"
+    lifecycle_version = "2.7.0"
+     activity_version = "1.8.2"
 }
 
 dependencies {
@@ -79,4 +81,16 @@ dependencies {
 
 //fragments
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
+    implementation("androidx.activity:activity-ktx:$activity_version")
+
+// Preferences DataStore (SharedPreferences like APIs)
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+// LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
 }
