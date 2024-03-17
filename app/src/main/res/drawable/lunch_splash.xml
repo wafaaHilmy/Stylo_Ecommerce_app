@@ -9,14 +9,11 @@
         android:width="150dp"
         android:height="150dp"
         />
-
-
     <item
         android:drawable="@drawable/ic_brand"
         android:gravity="center|bottom"
         android:width="200dp"
-        android:height="80dp"
-       android:bottom="40dp"
+        android:height="60dp"
+        android:bottom="20dp"
         />
-
 </layer-list>
