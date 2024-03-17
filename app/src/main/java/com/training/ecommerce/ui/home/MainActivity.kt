@@ -25,16 +25,15 @@ class MainActivity : AppCompatActivity() {
         UserViewModelFactory(UserDataStoreRepositoryImpl(UserPreferencesDataSource(this)))
 
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
         lifecycleScope.launch(Main) {
             val isLoggedIn = userViewModel.isUserLoggedIn()
             Log.d(TAG, "onCreate: isLoggedIn: $isLoggedIn")
             if (isLoggedIn) {
-                binding = ActivityMainBinding.inflate(layoutInflater)
                 setContentView(binding.root)
 
             } else {
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToAuthActivity() {
         val intent = Intent(this, AuthActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            //flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         val options = ActivityOptions.makeCustomAnimation(
             this, android.R.anim.fade_in, android.R.anim.fade_out
