@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="TitleTextViewStyle">
+        <item name="android:textColor">@color/primary_dark_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+
+    <style name="MessageTextViewStyle">
+    <item name="android:textColor">@color/neutral_grey</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+
+    <style name="EditTextStyle">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_grey</item>
+        <item name="android:background">@drawable/edit_text_border</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="PrimaryButtonStyle">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/button_bg</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="LoginButtonStyle">
+    <item name="android:gravity">center</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">57sp</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:background">@drawable/edit_text_border</item>
+    <item name="android:fontFamily">@font/poppins_bold</item>
+    <item name="android:textColor">@color/neutral_grey</item>
+    </style>
+
+
+    <style name="MediumPrimaryTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

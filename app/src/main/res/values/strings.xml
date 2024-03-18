@@ -2,6 +2,16 @@
     <string name="app_name">Stylo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="welcome_to_stylo">Welcome to Stylo</string>
-    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="auth_welcome_msg">Welcome to Stylo</string>
+    <string name="sign_in_msg">Sign in to continue</string>
+    <string name="email_et_hint">Your Email</string>
+    <string name="password_et_hint">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">OR</string>
+
+    <string name="google_signin_btn_msg">Login with Google</string>
+    <string name="facebook_signin_btn_msg">Login with Facebook</string>
+    <string name="forgot_password_msg">Forgot Password?</string>
+    <string name="have_a_account_msg">Don’t have a account?</string>
+    <string name="register">Register</string>
 </resources>
