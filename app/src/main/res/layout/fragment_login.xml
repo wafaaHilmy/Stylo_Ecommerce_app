@@ -48,23 +48,27 @@
             />
         
         <androidx.appcompat.widget.AppCompatEditText
+            android:text="@={loginViewModel.email}"
             android:id="@+id/email_et"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="36dp"
             style="@style/EditTextStyle"
+            android:inputType="textEmailAddress"
             android:drawableStart="@drawable/ic_email"
             android:hint="@string/email_et_hint" />
 
 
 
         <androidx.appcompat.widget.AppCompatEditText
+            android:text="@={loginViewModel.password}"
             android:id="@+id/password_et"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
             style="@style/EditTextStyle"
             android:drawableStart="@drawable/ic_password"
+            android:inputType="textPassword"
             android:hint="@string/password_et_hint"
             />
 

@@ -12,14 +12,14 @@ import com.training.ecommerce.databinding.ActivityAuthBinding
 class AuthActivity : AppCompatActivity() {
 
    private lateinit var binding: ActivityAuthBinding
-   private lateinit var loginViewModel: LoginViewModel
+  // private lateinit var loginViewModel: LoginViewModel
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        loginViewModel=ViewModelProvider(this).get(LoginViewModel::class.java)
+       // loginViewModel=ViewModelProvider(this).get(LoginViewModel::class.java)
         // Obtain reference to the NavHostFragment
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.login_nav_host_fragment) as NavHostFragment
         // Get the NavController
