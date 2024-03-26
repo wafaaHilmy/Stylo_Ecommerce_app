@@ -13,7 +13,6 @@ class FirebaseAuthRepositoryImpl(private val auth: FirebaseAuth=FirebaseAuth.get
         flow {
 
         try{
-
             emit(Resource.Loading())
             // suspends the coroutine until the task is complete
             val authResult = auth.signInWithEmailAndPassword(email, password).await()

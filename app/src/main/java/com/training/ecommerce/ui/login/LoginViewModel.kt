@@ -8,9 +8,13 @@ import com.training.ecommerce.data.repository.auth.FirebaseAuthRepository
 import com.training.ecommerce.data.repository.user.UserPreferenceRepository
 import com.training.ecommerce.utils.isValidEmail
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
@@ -19,6 +23,9 @@ class LoginViewModel(private val userPrefs: UserPreferenceRepository,
 
     val email = MutableStateFlow("")
     val password = MutableStateFlow("")
+
+    private val _loginState = MutableSharedFlow<Resource<String>>()
+    val loginState: SharedFlow<Resource<String>> = _loginState.asSharedFlow()
 
     private val isLoginIsValid: Flow<Boolean> = combine(email, password) { email, password ->
         email.isValidEmail() && password.length >= 6
@@ -29,13 +36,14 @@ class LoginViewModel(private val userPrefs: UserPreferenceRepository,
         val password = password.value
         if(isLoginIsValid.first()){
             authRepository.loginWithEmailAndPassword(email,password).onEach {resource ->
-
-//                    when(resource){
-//                        is Resource.Success ->userPrefs.saveUserEmail(email)
-//                    }
-            }
+     when(resource){
+         is Resource.Success ->  _loginState.emit(Resource.Success(resource.data ?: "Empty User Id"))
+         else -> _loginState.emit(resource)
+     }
+                   }.launchIn(viewModelScope)
+            }else{_loginState.emit(Resource.Error(Exception("Invalid email or password")))}
         }
-    }
+
 
     override fun onCleared() {
         super.onCleared()
